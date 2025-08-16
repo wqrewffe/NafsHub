@@ -29,7 +29,9 @@ export default defineConfig(({ mode }) => {
         'chart.js',
         'chart.js/auto',
         'date-fns',
-        'react-chartjs-2'
+        'react-chartjs-2',
+        'generative-ai'
+
       ]
     },
     build: {

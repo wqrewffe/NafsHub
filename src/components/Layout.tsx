@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import { Logo } from './Logo';
 
 const Layout: React.FC = () => {
   const { currentUser, logout } = useAuth();
@@ -39,14 +40,17 @@ const Layout: React.FC = () => {
             )}
           </div>
 
-          <Link to="/" className="inline-block">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-fuchsia-500 pt-14 sm:pt-0">
-              Nafs Hub
-            </h1>
-          </Link>
-          <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
-            Your personal AI companion for mindful learning and growth.
-          </p>
+          <div className="pt-14 sm:pt-0">
+            <Link to="/" className="inline-flex flex-col items-center group transition-transform duration-300 hover:scale-105">
+              <Logo className="mb-2 h-16 w-16" />
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-fuchsia-500">
+                Nafs Hub
+              </h1>
+            </Link>
+            <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
+              Your personal AI companion for mindful learning and growth.
+            </p>
+          </div>
         </header>
         <Outlet />
       </main>
