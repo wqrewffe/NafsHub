@@ -30,13 +30,13 @@ export default defineConfig(({ mode }) => {
         'chart.js/auto',
         'date-fns',
         'react-chartjs-2',
-        'generative-ai'
-
+        'generative-ai' // ✅ only browser-compatible modules
       ]
     },
     build: {
       rollupOptions: {
-        external: []
+        // Node-only modules should be externalized
+        external: ['@google/genai']
       }
     }
   };
