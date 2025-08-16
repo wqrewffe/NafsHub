@@ -6,6 +6,7 @@ import Login from './src/pages/Login';
 import Signup from './src/pages/Signup';
 import PrivateRoute from './src/components/PrivateRoute';
 import ForgotPassword from './src/pages/ForgotPassword';
+import NotFound from './src/pages/NotFound';
 
 import FiveWhysExplorer from './src/features/FiveWhysExplorer';
 import ConnectionWeaver from './src/features/ConnectionWeaver';
@@ -98,6 +99,9 @@ const App: React.FC = () => {
           <Route element={<AdminRoute />}>
             <Route path="admin" element={<AdminDashboard />} />
           </Route>
+          
+          {/* Catch-all route for 404 Not Found pages */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </HashRouter>

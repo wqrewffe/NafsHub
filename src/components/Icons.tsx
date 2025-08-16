@@ -371,3 +371,11 @@ export const GoogleIcon: React.FC<IconProps> = ({ className }) => (
         <path fill="#1976D2" d="M43.611 20.083L48 20V24c0 13.255-10.745 24-24 24c-8.8 0-16.6-4.9-20.9-12.2l6.5-6.5c2.16 3.26 5.998 5.45 10.4 5.45c2.71 0 5.153-.82 7.172-2.162l6.2 6.2C33.1 46.1 28.6 48 24 48c-1.3 0-2.5-.06-3.7-.19l-6.1-6.1C10.7 34.9 8.1 29.8 8.1 24c0-4.029.96-7.809 2.6-11.137L6.3 14.691z"></path>
     </svg>
 );
+
+export const AlertTriangleIcon: React.FC<IconProps> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+    <path d="M12 9v4" />
+    <path d="M12 17h.01" />
+  </svg>
+);
