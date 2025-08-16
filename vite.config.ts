@@ -35,8 +35,12 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       rollupOptions: {
-        // Node-only modules should be externalized
-        external: ['@google/genai']
+        external: [],
+        output: {
+          manualChunks: {
+            vendor: ['@google/generative-ai']
+          }
+        }
       }
     }
   };
